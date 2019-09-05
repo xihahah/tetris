@@ -1,0 +1,428 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background:url("../img/p.jpg");
+    /*background-size:auto 100% ;*/
+}
+.main{
+    width: 800px;
+    height:620px;
+    position: absolute;
+    background-color: rgb(255, 241, 213);
+    margin:auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    border:5px dashed #fa875d;
+}
+@font-face{
+    font-family: titleFont;
+    src: url("../font/迷你简罗卜.ttf");
+}
+/*欢迎界面*/
+.welcome{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+.welcome h1{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    letter-spacing: 20px;
+    top:150px;
+    font-size: 60px;
+    color: #fa695b;
+    font-family: titleFont;
+    cursor: default;
+}
+button{
+    cursor: pointer;
+    width: 180px;
+    height:50px;
+    font-size: 20px;
+    letter-spacing: 10px;
+    text-align: center;
+    position: absolute;
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+}
+.welcome .btn1{
+    top: 380px;
+    left:310px;
+    background: #a1c1d1;
+    border: 3px solid #6d86a0;
+}
+.welcome .btn1:hover{
+    background: rgba(161, 193, 209, 0.7);
+    border: 3px solid rgba(109, 134, 160, 0.67);
+}
+.welcome .btn2{
+    top: 450px;
+    left:310px;
+    background: #fbaa43;
+    border: 3px solid #fb931d;
+}
+.welcome .btn2:hover{
+    background: rgba(251, 170, 67, 0.66);
+    border: 3px solid rgba(251, 147, 29, 0.59);
+}
+
+
+
+/*游戏界面*/
+.playgame{
+    display: none;
+    position: relative;
+}
+.playgame h1{
+    display: block;
+    width:800px;
+    text-align: center;
+    z-index: 100;
+    position: absolute;
+    top:-60px;
+    color: #fa695b;
+    font-family: titleFont;
+    font-weight:lighter;
+    font-size: 45px;
+    letter-spacing: 10px;
+    cursor:default ;
+}
+.game{
+    width: 450px;
+    height: 600px;
+    background-color: rgba(250, 219, 209, 0.59);
+    position: absolute;
+    left:50px;
+    top: 10px;
+}
+.level{
+    position: absolute;
+    width:200px;
+    text-align: center;
+    left:550px;
+    top: 25px;
+    color: #fa695b;
+    font-size: 26px;
+    letter-spacing: 10px;
+    font-weight: 800;
+}
+.nextW{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.64);
+    border:5px solid #fa695b;
+    width:200px;
+    height: 200px;
+    left:550px;
+    top: 80px;
+    border-radius: 10px;
+}
+.nextW span{
+    width: 100%;
+    height: 30px;
+    line-height: 35px;
+    text-align: center;
+    background: #fa695b;
+    color:#fff;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    bottom: -2px;
+    font-family:"Kristen ITC";
+    font-size: 20px;
+    font-weight: 800;
+}
+.next{
+    width: 120px;
+    height: 120px;
+    margin:40px;
+    box-sizing: content-box;
+    position: absolute;
+}
+.info{
+    position: absolute;
+    left:550px;
+    top: 350px;
+}
+.score{
+    cursor: default;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-family:"Kristen ITC";
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 10px;
+    background: #ffb33b;
+    border:5px solid #e7a235;
+    position: absolute;
+    top: 0;
+    color:#fff;
+    border-radius: 10px;
+}
+.time{
+    cursor: default;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-family:"Kristen ITC";
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+    background: #b9dcca;
+    border:5px solid #97c1dc;
+    position: absolute;
+    top: 80px;
+    color:#fff;
+    border-radius: 10px;
+}
+.btn3{
+    width: 210px;
+    height: 40px;
+    background: #ec8761;
+    border: none;
+    position: absolute;
+    font-size: 18px;
+    top: 190px;
+    color:#fff;
+}
+.btn3:hover{
+    background: rgba(236, 135, 97, 0.62);
+}
+.gameover{
+    position: absolute;
+    display: block;
+    width: 450px;
+    text-align: center;
+    z-index: 100;
+    color: #fa695b;
+    font-size: 45px;
+    left:50px;
+    top:150px;
+}
+.tishi{
+    width: 450px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.21);
+    position: absolute;
+    left:50px;
+    top: 10px;
+    display: none;
+}
+.btn4{
+    width: 100px;
+    height: 30px;
+    background: #fff;
+    border: 2px solid #c5b7eb;
+    position: absolute;
+    font-size: 18px;
+    top: 250px;
+    left:100px;
+    color:#c5b7eb;
+}
+.btn4:hover{
+    background: rgba(255, 255, 255, 0.75);
+}
+.btn5{
+    width: 100px;
+    height: 30px;
+    background: rgb(207, 201, 235);
+    border: 2px solid #c5b7eb;
+    position: absolute;
+    font-size: 18px;
+    top: 250px;
+    left:250px;
+    color:#fff;
+}
+.btn5:hover{
+    background: rgba(207, 201, 235, 0.66);
+}
+.cont{
+    display: none;
+    width: 800px;
+    height:620px;
+    position: absolute;
+    background-color: rgb(250, 219, 209);
+    z-index: 10;
+}
+.cont p{
+    width: 100%;
+    text-align: center;
+    color: #fa695b;
+    position: absolute;
+    top:150px;
+    /*left:200px;*/
+    font-size: 35px;
+}
+.continue{
+    width:100px;
+    height:100px;
+    position: absolute;
+    left:350px;
+    top:300px;
+    background: #fa695b;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.continue i{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/kaishi.png") center no-repeat;
+}
+.continue:hover{
+    background: rgba(250, 105, 91, 0.7);
+}
+/*方块样式*/
+.none,.current,.done{
+    width: 30px;
+    height:30px;
+    position: absolute;
+    box-sizing: border-box;
+}
+/*没有方块*/
+.none{
+    /*background-color: rgba(250, 219, 209, 0.59);*/
+    /*border:1px solid #fa695b;*/
+}
+/*用户正在操作的方块*/
+.current {
+    background-color: #fac393;
+    border: 1px solid #fa695b;
+}
+/*已经落下的方块*/
+.done{
+    background-color: #bcb2b7;
+    border:1px solid #565455;
+}
+/*作者信息*/
+.msg{
+    width: 100%;
+    height: 100%;
+    position:relative;
+    display: none;
+}
+.msg h1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    letter-spacing: 20px;
+    top:50px;
+    font-size: 40px;
+    color: #fa695b;
+    text-align: center;
+}
+.msg .js{
+    width: auto;
+    position: absolute;
+    top:160px;
+    left: 250px;
+    color: #723029;
+    font-size: 20px;
+}
+.msg .js div{
+     width: 50px;
+     height: 50px;
+     background-color: #fff;
+     border: 1px solid #c0c0b7;
+    position: absolute;
+    box-shadow:2px 2px 2px rgba(180, 180, 180, 0.46);
+    cursor: pointer;
+ }
+.msg .js div:hover{
+    background-color: #c1e2ff;
+}
+.msg .js .s{
+    top:20px;
+    left:120px;
+}
+.msg .js .x{
+    top:70px;
+    left:120px;
+    z-index: 3;
+}
+.msg .js .z{
+    left:69px;
+    top:70px;
+    border-right: none;
+}
+.msg .js .y{
+    left:172px;
+    top:70px;
+    border-left:none;
+    z-index: 4;
+}
+.msg .js .space{
+    width: 300px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #c0c0b7;
+    top:200px;
+}
+.msg .js p{
+    position: absolute;
+    font-size: 20px;
+    color: #777777;
+    width: 80px;
+}
+.msg .js .s p{
+    left:60px;
+}
+.msg .js .x p{
+    top:55px;
+    left: 6px;
+}
+.msg .js .z p{
+    top:10px;
+    left:-50px;
+}
+.msg .js .y p{
+    top:10px;
+    left:60px;
+}
+.msg .js .space p{
+    top:55px;
+    left:120px;
+}
+.msg button{
+    width: 150px;
+    height: 40px;
+    top:500px;
+    left: 320px;
+    background: #faa097;
+    border: 3px solid #fa695b;
+}
+.msg button:hover{
+    background: rgba(250, 160, 151, 0.62);
+    border: 3px solid rgba(250, 105, 91, 0.6);
+}
+/*音乐*/
+.bgm{
+    position: absolute;
+    top:15px;
+    right: 20px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fa875d;
+    background-image: url("../img/vynil.png");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: 30px;
+    cursor: pointer;
+    animation: rotateImg 1s linear infinite;
+}
+.bgm:hover{
+    background-color: rgba(250, 135, 93, 0.64);
+}
+@keyframes rotateImg {
+    0% {transform : rotate(0deg);}
+    100% {transform : rotate(360deg);}
+}
